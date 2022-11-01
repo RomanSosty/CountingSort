@@ -21,7 +21,7 @@ void ComparisonCountingSort(int *myNum, int lenArr){
     }
 
     for(int i = 0; i <lenArr; i++){
-
+        std::cout << cout[i] << std::endl;
     }
 
 }
