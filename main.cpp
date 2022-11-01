@@ -1,8 +1,21 @@
 #include <iostream>
-#include <vector>
 
+void ComparisonCountingSort(int *myNum, int lenArr){
+    int count[lenArr];
+    
+    for(int i = 0; i < lenArr; i++)
+    {
+        count[i] = 0;
+        std::cout << count[i] << std::endl;
+    }
 
-void ComparisonCountingSort(){
+    for(int i = 0; i < lenArr-1; i++){
+        for (int j = i+1; j < count; j++)
+        {
+            /* code */
+        }
+        
+    }
 
 }
 
@@ -12,7 +25,9 @@ void DistributionCountingSort(){
 
 
 int main(){
-    std::vector<double> A = {4, 5, -1, 7, 0, 3};
+    int myNum[6] = {62,31,84,96,19,47};
+    int lenArr = sizeof(myNum)/sizeof(int);
     
+    ComparisonCountingSort(&myNum[0], lenArr);
     return 0;
 }
