@@ -22,10 +22,10 @@ int * ComparisonCountingSort(int *myNum, int lenArr){
     }
 
     for(int i = 0; i < lenArr; i++){
-        final[count[i]] = myNum[i];
+        &final[count[i]] = myNum[i];
     }
 
-    return final;
+    return &final;
 
 }
 
