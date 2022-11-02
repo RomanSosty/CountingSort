@@ -2,7 +2,7 @@
 
 int * ComparisonCountingSort(int *myNum, int lenArr){
     int count[lenArr];
-    static int final[lenArr];
+    int *final[lenArr];
 
     for(int i = 0; i < lenArr; i++)
     {
