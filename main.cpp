@@ -1,6 +1,6 @@
 #include <iostream>
 
-int* ComparisonCountingSort(int *myNum, int lenArr, int *finalArr){
+void ComparisonCountingSort(int *myNum, int lenArr, int *finalArr){
     int count[lenArr];
 
     for(int i = 0; i < lenArr; i++)
@@ -24,8 +24,6 @@ int* ComparisonCountingSort(int *myNum, int lenArr, int *finalArr){
         finalArr[count[i]] = myNum[i];
     }
 
-    return finalArr;
-
 }
 
 void DistributionCountingSort(){
@@ -44,8 +42,10 @@ int main(){
     int myNum[6] = {62,31,84,96,19,47};
     int lenArr = sizeof(myNum)/sizeof(int);
     int finalArr[lenArr];
+
+    ComparisonCountingSort(&myNum[0], lenArr, &finalArr[0])
     
-    printArr(ComparisonCountingSort(&myNum[0], lenArr, &finalArr[0]), lenArr);
+    printArr(&finalArr, lenArr);
 
     return 0;
 }
