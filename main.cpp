@@ -2,7 +2,7 @@
 
 int[] ComparisonCountingSort(int *myNum, int lenArr){
     int count[lenArr];
-    int final[final];
+    int final[lenArr];
 
     for(int i = 0; i < lenArr; i++)
     {
@@ -46,6 +46,6 @@ int main(){
     int lenArr = sizeof(myNum)/sizeof(int);
     
     printArr(ComparisonCountingSort(&myNum[0], lenArr), lenArr);
-    
+
     return 0;
 }
