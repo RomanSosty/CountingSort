@@ -45,7 +45,7 @@ int main(){
 
     ComparisonCountingSort(&myNum[0], lenArr, &finalArr[0]);
     
-    printArr(&finalArr, lenArr);
+    printArr(finalArr, lenArr);
 
     return 0;
 }
