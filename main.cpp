@@ -1,6 +1,6 @@
 #include <iostream>
 
-int[] ComparisonCountingSort(int *myNum, int lenArr){
+int * ComparisonCountingSort(int *myNum, int lenArr){
     int count[lenArr];
     int final[lenArr];
 
