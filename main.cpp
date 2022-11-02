@@ -43,7 +43,7 @@ int main(){
     int lenArr = sizeof(myNum)/sizeof(int);
     int finalArr[lenArr];
 
-    ComparisonCountingSort(&myNum[0], lenArr, &finalArr[0])
+    ComparisonCountingSort(&myNum[0], lenArr, &finalArr[0]);
     
     printArr(&finalArr, lenArr);
 
