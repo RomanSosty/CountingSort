@@ -1,8 +1,7 @@
 #include <iostream>
 
-int * ComparisonCountingSort(int *myNum, int lenArr){
+int* ComparisonCountingSort(int *myNum, int lenArr, int *finalArr){
     int count[lenArr];
-    int *final[lenArr];
 
     for(int i = 0; i < lenArr; i++)
     {
@@ -22,10 +21,10 @@ int * ComparisonCountingSort(int *myNum, int lenArr){
     }
 
     for(int i = 0; i < lenArr; i++){
-        &final[count[i]] = myNum[i];
+        finalArr[count[i]] = myNum[i];
     }
 
-    return &final;
+    return finalArr;
 
 }
 
@@ -44,8 +43,9 @@ void printArr(int *myArr, int lenArr){
 int main(){
     int myNum[6] = {62,31,84,96,19,47};
     int lenArr = sizeof(myNum)/sizeof(int);
+    int finalArr[lenArr];
     
-    printArr(ComparisonCountingSort(&myNum[0], lenArr), lenArr);
+    printArr(ComparisonCountingSort(&myNum[0], lenArr, &finalArr[0]), lenArr);
 
     return 0;
 }
