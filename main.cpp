@@ -2,8 +2,8 @@
 #include <vector>
 
 std::vector<int> ComparisonCountingSort(std::vector<int> *A){
-    std::vector<int> Count;
-    std::vector<int> S;
+    std::vector<int> Count = null;
+    std::vector<int> S = null;
 
     for(int i = 0; i < A.size(); i++)
     {
@@ -26,6 +26,8 @@ std::vector<int> ComparisonCountingSort(std::vector<int> *A){
         S[count[i]] = A[i];
     }
 
+    return S;
+
 }
 
 void DistributionCountingSort(){
@@ -43,8 +45,6 @@ void printArr(std::vector<int> *A){
 int main(){
 
     std::vector<int> myNum = {62,31,84,96,19,47};
-
-    
 
     printArr(ComparisonCountingSort(&myNum));
 
