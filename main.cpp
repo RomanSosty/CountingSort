@@ -1,27 +1,29 @@
 #include <iostream>
+#include <vector>
 
-void ComparisonCountingSort(int *myNum, int lenArr, int *finalArr){
-    int count[lenArr];
+std::vector<int> ComparisonCountingSort(std::vector<int> *A){
+    std::vector<int> Count;
+    std::vector<int> S;
 
-    for(int i = 0; i < lenArr; i++)
+    for(int i = 0; i < A.size(); i++)
     {
-        count[i] = 0;
+        Count.push_back(0);
     }
 
-    for(int i = 0; i < lenArr-1; i++){
-        for (int j = i+1; j < lenArr; j++)
+    for(int i = 0; i < A.size()-1; i++){
+        for (int j = i+1; j < A.size(); j++)
         {
-            if(myNum[i] < myNum[j]){
-                count[j] = count[j]+1;
+            if(A[i] < A[j]){
+                Count[j] = Count[j]+1;
             }else{
-                count[i] = count[i]+1;
+                Count[i] = Count[i]+1;
             }
         }
         
     }
 
-    for(int i = 0; i < lenArr; i++){
-        finalArr[count[i]] = myNum[i];
+    for(int i = 0; i < A.size(); i++){
+        S[count[i]] = A[i];
     }
 
 }
@@ -30,22 +32,21 @@ void DistributionCountingSort(){
 
 }
 
-void printArr(int *myArr, int lenArr){
-    for(int i = 0; i < lenArr; i++)
+void printArr(std::vector<int> *A){
+    for(int i = 0; i < A.size(); i++)
     {
-        std::cout << myArr[i] << ", ";
+        std::cout << A[i] << ", ";
     }
 }
 
 
 int main(){
-    int myNum[6] = {62,31,84,96,19,47};
-    int lenArr = sizeof(myNum)/sizeof(int);
-    int finalArr[lenArr];
 
-    ComparisonCountingSort(&myNum[0], lenArr, &finalArr[0]);
+    std::vector<int> myNum = {62,31,84,96,19,47};
+
     
-    printArr(finalArr, lenArr);
+
+    printArr(ComparisonCountingSort(&myNum));
 
     return 0;
 }
